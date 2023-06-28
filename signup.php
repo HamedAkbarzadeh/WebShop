@@ -1,0 +1,148 @@
+<?php include "header-UserPanel.php"; ?>
+<!-- START SECTION BREADCRUMB -->
+<div class="breadcrumb_section bg_gray page-title-mini">
+    <div class="container"><!-- STRART CONTAINER -->
+        <div class="row align-items-center">
+        	<div class="col-md-6">
+                <div class="page-title">
+            		<h1>ثبت نام</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ol class="breadcrumb justify-content-md-end">
+                    <li class="breadcrumb-item"><a href="index.php">خانه</a></li>
+                    <li class="breadcrumb-item active">ثبت نام</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- END CONTAINER-->
+</div>
+<!-- END SECTION BREADCRUMB -->
+
+<!-- START MAIN CONTENT -->
+
+<?php
+if (isset($_GET["captchaError"])){
+    echo '
+    <div class="new_validation msg_noti_minus d-flex">
+        <div><i class="fas fa-times close-icon"></i></div>
+    <span>کد امنیتی درست وارد نشده است .</span>
+</div>
+    ';
+}
+
+if (isset($_GET["failed_insert"])){
+    echo '
+    <div class="new_validation msg_noti_minus d-flex">
+        <div><i class="fas fa-times close-icon"></i></div>
+    <span>این ایمیل قبلا ثبت شده است . ایمیل دیگر وارد کنید .</span>
+</div>
+    ';
+}
+?>
+
+
+<div class="main_content">
+
+<!-- START LOGIN SECTION -->
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="login_wrap">
+            		<div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>ایجاد یک حساب کاربری</h3>
+                        </div>
+                        <form action="user/add-user-check.php" method="post" id="form_sign_up">
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="fname">نام خود را وارد کنید</label>
+                                </div>
+                                <input autofocus type="text" class="form-control" id="fname" name="fname" placeholder="نام خود را وارد کنید">
+                            </div>
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="lname">نام خانوادگی خود را وارد کنید</label>
+                                </div>
+                                <input type="text" class="form-control" id="lname" name="lname" placeholder="نام خانوادگی خود را وارد کنید">
+                            </div>
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="email">  ایمیل خود را وارد کنید</label>
+                                </div>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ایمیل خود را وارد کنید">
+                            </div>
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="password">رمز عبور خود را وارد کنید</label>
+                                </div>
+                                <input class="form-control" type="password" id="password" name="password" placeholder="کلمه عبور">
+                            </div>
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="password_check">پسورد خود را دوباره وارد کنید</label>
+                                </div>
+                                <input class="form-control" type="password" id="password_check" name="password_check" placeholder="تأیید  کلمه عبور">
+                            </div>
+                            <div class="form-group captcha_code">
+                                <img src="captcha.php" id="captcha_refresh">
+                                <i class="fas fa-sync" id="btn_captcha_refresh"></i>
+                            </div>
+                            <div class="form-group">
+                                <div class="label-group">
+                                    <label class="lbl Important" for="captcha">کد امنیتی را وارد کنید</label>
+                                </div>
+                                <input class="form-control" type="text" id="captcha" name="captcha" placeholder="کد امنیتی">
+                            </div>
+                            <div class="login_footer form-group">
+                                <div class="chek-form">
+                                    <div class="custome-checkbox">
+                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox2" value="">
+                                        <label class="form-check-label" for="exampleCheckbox2"><span>من با شرایط و سیاست موافقم.</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="signup_user" class="btn btn-fill-out btn-block" name="register">ثبت نام</button>
+                            </div>
+                        </form>
+                        <div class="different_login">
+                            <span> یا</span>
+                        </div>
+                        <div class="form-note text-center">حساب کاربری دارید؟ <a href="login.php">وارد شوید</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END LOGIN SECTION -->
+
+<!-- START SECTION SUBSCRIBE NEWSLETTER -->
+<div class="section bg_default small_pt small_pb">
+    <div class="container"> 
+        <div class="row align-items-center">    
+            <div class="col-md-6">
+                <div class="heading_s1 mb-md-0 heading_light">
+                    <h3>اشتراک در خبرنامه ما</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="newsletter_form">
+                    <form>
+                        <input type="text" id="email_news" required="" class="form-control rounded-0" placeholder="آدرس ایمیل">
+                        <button type="button" id="btn_email_news" class="btn btn-dark rounded-0" name="submit" value="Submit">
+                            اشتراک
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- START SECTION SUBSCRIBE NEWSLETTER -->
+
+</div>
+<!-- END MAIN CONTENT -->
+<?php include "footer.php"; ?>

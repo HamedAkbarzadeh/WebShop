@@ -1,0 +1,667 @@
+/** Start Header **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    position: relative;
+    text-decoration: none;
+}
+a::after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: .2em;
+    position: absolute;
+    bottom: -.5em;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    pointer-events: none;
+    transition: transform .40s ease;
+}
+
+.all_fixed_Page{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+}
+.right_manager_admin{
+    width: 30vw;
+    height: 100vh;
+}
+.left_manager_admin{
+    width: 70vw;
+    height: 100vh;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    border-bottom: 0.2em solid white;
+}
+.top_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    width: 100%;
+    background: #FF324D;
+}
+#welcome{
+    color: white;
+    font-size: 18px;
+}
+
+/*** for mobile w= 800; ****/
+.mini_header{
+    display: none;
+}
+.self_admin_name{
+    display: none;
+}
+/*** for mobile w= 800; ****/
+#person{
+    font-size: 19px;
+    padding-right: 10px;
+    color: #e2e0e0;
+}
+.center_header
+{
+    display: flex;
+
+}
+.center_header ul{
+    list-style: none;
+    display: flex;
+    color: white;
+}
+.center_header ul li {
+    margin: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.center_header ul li a{
+    color: white;
+}
+
+/** End Header **/
+
+/*** Start Body ***/
+.All-Body{
+    width: 95%;
+    height: 100%;
+    border: 1px solid red;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+}
+.manager_left{
+    width: 78%;
+    height: 100%;
+}
+#frame{
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: none;
+}
+
+.manager_right{
+    width: 22%;
+    height: 100%;
+    overflow: scroll;
+    border-left: 2px solid #ffeef0;
+}
+.manager_right ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+}
+.manager_right ul li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    align-items: flex-start;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.manager_right ul li:hover{
+    color: #fc1c3a;
+    background: #faedf1;
+}
+.manager_right ul li i {
+    color: #FF324D;
+    font-size: 23px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+/*** End Body ***/
+
+/*** user Manager ***/
+.All-user-manager{
+    width: 60%;
+    height: 80%;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+.All-user-manager ul {
+    list-style: none;
+}
+.All-user-manager ul a{
+    border-bottom: none;
+}
+
+.All-user-manager ul li{
+    margin: 20px auto;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fa5e74;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.All-user-manager ul li:first-child{
+    margin-top: 30px;
+}
+.All-user-manager ul li i{
+    margin-top: 15px;
+}
+.All-user-manager ul li:hover{
+    background: #fa5e74;
+    color: white;
+    transition: All .5s;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/*** Add-User ***/
+/** //**/
+.validation_input{
+    width: 250px;
+    height: 85px;
+    color: white;
+    position: fixed;
+    display: none;
+    bottom: 85px;
+    left: 20px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    z-index: 2000;
+}
+.MSG_ALL_NOTI_MINUS{
+    background: #f63939;
+}
+.MSG_ALL_NOTI_PLUS{
+    background: #00d900;
+}
+.full_bottom_Border_validation{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    color: white;
+    bottom: 10px;
+    display: flex;
+    left: 0;
+}
+/** //**/
+
+/*.msg-plus{*/
+/*    width: 290px;*/
+/*    height: 70px;*/
+/*    background: rgba(17, 168, 1, 0.6);*/
+/*    margin: 30px auto 0 auto;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    border-radius: 9px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    display: none;*/
+/*    position: relative;*/
+/*    font-size: 17px;*/
+/*}*/
+/*.msg-p{*/
+/*    position: absolute;*/
+/*}*/
+
+/*.msg-minus{*/
+/*    width: 265px;*/
+/*    height: 70px;*/
+/*    background: rgba(208, 6, 6, 0.6);*/
+/*    margin: 30px auto 0 auto;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    border-radius: 9px;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    display: none;*/
+/*    position: relative;*/
+/*}*/
+/*.minus{*/
+/*    margin-bottom: 15px;*/
+/*}*/
+/*.full_bottomBorder{*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 3px;*/
+/*    background: white;*/
+/*    color: white;*/
+/*    bottom: 10px;*/
+/*    display: flex;*/
+/*    left: 0;*/
+/*}*/
+/*.dis_on_flex{*/
+/*    display: block;*/
+/*}*/
+/*.dis_none{*/
+/*    display: none;*/
+/*}*/
+/*** End Add-User ***/
+/*** Delete-user ***/
+    .tbl_tr{
+        background: #f8314b;
+        color: white;
+        font-weight: bold;
+    }
+    .tbl_tr_second{
+        background: #fff1f1;
+        color: #f8314b;
+        font-weight: bold;
+    }
+    .stClass{
+        color: red;
+
+    }
+    .stClass:hover{
+        color: #ff4747;
+        text-decoration: none;
+    }
+    .stClass:hover::after {
+        transform: scaleX(1);
+        border-bottom: 0.2em solid #ff4747;
+    }
+/*** End Delete-user ***/
+/*** Start show_All_user ****/
+.search_show_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+#search_Box{
+    width: 350px;
+    height: 40px;
+    border-radius: 0 9px 9px 0;
+    direction: rtl;
+    padding: 7px 15px;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #ff6e6e;
+    background: linear-gradient(to left , #ffffff, #ffbfbf);
+}
+.search_show_user button{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    border-radius: 9px 0 0 9px ;
+    background: linear-gradient(to right , #f15c5c , #e00101);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.not-found{
+    color: red;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+/*** End show_All_user ****/
+/*** End User ***/
+
+/*** Start categories ***/
+
+/** Add-cat **/
+.empty_op{
+    margin-right: auto;
+    color: red;
+    font-weight: bold;
+}
+/** Add-cat **/
+
+/** Start delete-cate**/
+.empty_td{
+    color: red;
+    font-weight: bold;
+}
+
+/** End delete-cate**/
+
+/*** End categories ***/
+
+
+/********* START product *********/
+/*** START add-product **/
+.label-group{
+    display: flex;
+    flex-direction: column;
+}
+.mini_label{
+    color: #0E93D8;
+    font-size: 14px;
+}
+#file-product{
+    cursor: pointer;
+}
+.div_information{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+.two_div_information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+.right_inf{
+    width: 100%;
+    line-height: 33px;
+    border-radius: 5px;
+    margin: 9px auto;
+    border: 1px solid #fd5050;
+    padding: 0 5px;
+}
+.left_inf{
+    width: 100%;
+    line-height: 33px;
+    border-radius: 5px;
+    margin: 9px auto;
+    border: 1px solid #fd5050;
+    padding: 0 5px;
+}
+.lbl{
+    color: #0E93D8;
+    font-weight: bold;
+    text-align: center;
+}
+.text_blue{
+    color: #0E93D8;
+    font-weight: bold;
+}
+.btn_deluxe{
+    color: white;
+    background: #FF324D;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+.header_form{
+    display: flex;
+    justify-content: space-between;
+}
+.header_form i{
+    color: #FF324D;
+    font-size: 30px;
+}
+.header_form i:hover{
+    color: #ff1737;
+}
+.a_color a{
+    color: white;
+}
+.a_color a:hover{
+    color: #FF324D;
+    background: white;
+    border: 1px solid #FF324D;
+}
+.Important:before{
+    content: ' * ';
+    color: rgba(255, 50, 50, 0.82);
+}
+.group_header_admin{
+    display: flex;
+    justify-content: space-between;
+}
+.back i {
+    font-size: 29px;
+    color: #fd5050;
+}
+.back i:hover{
+    font-size: 30px;
+    color: #f81313;
+}
+/*** End add-product **/
+
+/** Start Delete-product.php **/
+.td_img{
+    display: flex;
+    justify-content: center;
+}
+.delete_img_product{
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+}
+.tmn_price{
+    font-size: 12px;
+    font-weight: bold;
+    color: green;
+}
+/** End Delete-product.php **/
+/********* END product *********/
+
+/*** All-order ***/
+.All-order{
+    direction: rtl;
+    text-align: center;
+}
+/*** End All-order ***/
+
+/*** Start vote-manager ***/
+.mini_success{
+    color: #0e9dff;
+    font-weight: bold;
+    font-size: 14px;
+}
+/*** End vote-manager ***/
+
+/*** Admin-login ***/
+#btn-Login{
+    color: white;
+}
+.btn{
+    color: white;
+}
+.backToindex a{
+    text-decoration: none;
+    color: #808080;
+}
+.backToindex a:hover::after {
+    transform: scaleX(1);
+    border-bottom: 0.2em solid #f14444;
+}
+.login_capt{
+    display: flex;
+}
+.captcha_admin_login{
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 30%;
+    border-radius: 4px;
+}
+/*** Admin-login ***/
+/**** validation X ****/
+.close-icon{
+    color: white;
+    display: flex;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.new_validation{
+    width: 250px;
+    height: auto;
+    color: white;
+    position: fixed;
+    display: none;
+    bottom: 100px;
+    left: 20px;
+    border-radius: 6px;
+    flex-direction: column;
+    padding-right: 5px;
+    padding-left: 5px;
+    z-index: 2000;
+}
+.new_validation span{
+    padding-bottom: 15px;
+    justify-self: center;
+}
+.msg_noti_minus{
+    background: #f63939;
+}
+.msg_noti_plus{
+    background: #29cb35;
+}
+/**** validation X ****/
+/***** CHECK BOX ****/
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+.panel-body {
+    width: 200px;
+    margin: auto;
+    background: #efefef;
+    padding: 30px 20px;
+}
+
+
+.small-text {
+    text-align: center;
+    font-size: 0.7em;
+    color: #ddd;
+}
+
+
+/*Check Box Styling -------------------------*/
+
+.checkbox-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-custom,
+.checkbox-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 1;
+}
+
+/*Simply Change the content to any font awesome unicode here to add your own check icon*/
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    font-family: 'FontAwesome';
+    background: #fe4365;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.checkbox-custom:focus + .checkbox-custom-label {
+    outline: 1px solid #ddd;
+    /* focus style */
+}
+/***** CHECK BOX ****/
+/**** slider manager *****/
+.img_slide_manager{
+    width: 100%;
+}
+.img_slide_manager img{
+    width: 100%;
+    height: 40%;
+}
+/**** slider manager *****/
+/** table **/
+.h1-style2{
+    color: #314c3e;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+/** table **/
+/** details-order-form ***/
+.cnc_want_div{
+    padding: 20px;
+    border: 1px solid #ff9c9c;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.right_cnc{
+    width: 48%;
+    height: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.left_cnc{
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.left_cnc img{
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+}
+.new_style_for_header_admin{
+    margin: 30px;
+}
+/** details-order-form ***/

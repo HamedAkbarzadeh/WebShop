@@ -1,0 +1,171 @@
+/******** responsive **********/
+@media (max-width: 900px) {
+  .manager_right {
+    display: none;
+  }
+  .All-Body {
+    width: 100%;
+    border: none;
+  }
+  .manager_left {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .top_header {
+    padding: 0 15px;
+  }
+  /******** responsive **********/
+  /*****/
+  .nav_manager_admin {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+  .nav_manager_admin ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    background: rgba(255, 185, 185, 0.5);
+  }
+  .nav_manager_admin ul li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    align-items: flex-start;
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  .nav_manager_admin ul li:hover {
+    color: #fc1c3a;
+    background: #faedf1;
+  }
+  .nav_manager_admin ul li i {
+    color: #FF324D;
+    font-size: 23px;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+  /******** responsive **********/
+  .mini_header {
+    display: flex;
+    margin: 15px 26px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .mini_header:hover {
+    color: #ffb9b9;
+  }
+}
+
+@media (max-width: 800px) {
+  .center_header {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav_manager_admin ul li {
+    font-size: 16px;
+  }
+  .right_manager_admin {
+    width: 35vw;
+    height: 100vh;
+  }
+  .left_manager_admin {
+    width: 65vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav_manager_admin ul li {
+    font-size: 16px;
+  }
+  .nav_manager_admin ul li i {
+    font-size: 20px;
+  }
+  .right_manager_admin {
+    width: 40vw;
+    height: 100vh;
+  }
+  .left_manager_admin {
+    width: 60vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 550px) {
+  .right_manager_admin {
+    width: 45vw;
+    height: 100vh;
+  }
+  .left_manager_admin {
+    width: 55vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 470px) {
+  .All-user-manager ul li {
+    font-size: 10px;
+  }
+  .self_admin_name {
+    display: none;
+  }
+  .left_header {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .self_admin_name {
+    display: block;
+    background-color: white;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .right_header {
+    display: none;
+  }
+  .nav_manager_admin ul li {
+    font-size: 16px;
+  }
+  .nav_manager_admin ul li i {
+    font-size: 17px;
+  }
+  .right_manager_admin {
+    width: 50vw;
+    height: 100vh;
+  }
+  .left_manager_admin {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav_manager_admin ul li {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .nav_manager_admin ul li i {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 315px) {
+  .nav_manager_admin ul li {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .nav_manager_admin ul li i {
+    font-size: 11px;
+  }
+}
+
+/******** responsive **********/
+/*# sourceMappingURL=responsive.css.map */
